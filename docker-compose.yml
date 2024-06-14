@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+  db:
+    image: mysql:8.1
+    environment:
+
+      MYSQL_ROOT_PASSWORD: teste
+      MYSQL_DATABASE: expressdb
+      MYSQL_USER: otavio
+      MYSQL_PASSWORD: teste
+
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db:/var/lib/mysql
+    networks:
+      - my_network
+networks:
+  my_network:
+    driver: bridge

@@ -7,8 +7,8 @@ interface User {
   password_hash: string;
 }
 
-class UserRepository {
-  constructor(private readonly mysql: MysqlClient) {}
+export class UserRepository {
+  constructor(readonly mysql: MysqlClient) {}
     async create(user: User): Promise<any> {
       try {
         const sql =
@@ -38,4 +38,3 @@ class UserRepository {
     }
 }
 
-export default UserRepository;

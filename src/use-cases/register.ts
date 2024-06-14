@@ -1,6 +1,6 @@
-import UserRepository from '@/repositories/user.repository';
+import {UserRepository} from '@/repositories/user.repository';
 import * as bcrypt from 'bcrypt';
-import { UserAlreadyExistsError } from '../errors/user-already-exists-error';
+import { UserAlreadyExistsError } from './errors/user-already-exists-error';
 
 interface User {
   username: string;

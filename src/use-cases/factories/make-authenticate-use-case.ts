@@ -1,7 +1,7 @@
 
-import UserRepository from '@/repositories/user.repository';
+import {UserRepository} from '@/repositories/user.repository';
 import { MysqlClient } from '@/database/mysl.database';
-import { AuthenticateUseCase } from '../user/authenticate';
+import { AuthenticateUseCase } from '../authenticate';
 
 export function makeAuthenticateUseCase() {
   const mysql = new MysqlClient()

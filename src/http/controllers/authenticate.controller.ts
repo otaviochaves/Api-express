@@ -33,6 +33,8 @@ export async function authenticateController(
     });
 
     res.status(200).json({
+      ...user,
+      password:undefined,
       token,
     });
   } catch (err) {

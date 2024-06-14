@@ -1,7 +1,7 @@
+import { InvalidCredentialsError } from './errors/invalid-credentials-error';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { InvalidCredentialsError } from '../errors/invalid-credentials-error';
-import UserRepository from '@/repositories/user.repository';
+import {UserRepository} from '@/repositories/user.repository';
 
 interface User {
   id?: number;

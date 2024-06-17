@@ -1,8 +1,8 @@
 import { InvalidCredentialsError } from '@/use-cases/errors/invalid-credentials-error';
 import { makeAuthenticateUseCase } from '@/use-cases/factories/make-authenticate-use-case';
 import { Request, Response } from 'express';
-import { generateToken } from '../middlewares/generate-token';
-import { generateRefreshToken } from '../middlewares/generate-refresh-token';
+import { generateToken } from '@/http/middlewares/generate-token';
+import { generateRefreshToken } from '@/http/middlewares/generate-refresh-token';
 
 
 export async function authenticateController(
